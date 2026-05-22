@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stargame Studio — Youth-powered ROBLOX game studio. Games, UGC, clothing, artwork. Est. June 2023." />
+  <meta name="theme-color" content="#080810" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Stargame Studio" />
+  <meta property="og:description" content="Dream it. Commission it. We build it." />
+  <meta property="og:image" content="assets/summer-icon.png" />
+  <meta property="og:type" content="website" />
+
+  <title>Stargame Studio</title>
+
+  <!-- Google Fonts — loaded with display=swap so text shows instantly -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ─────────────────────────────────────────────
+       ANNIVERSARY BANNER
+  ───────────────────────────────────────────── -->
+  <div class="ann-banner">
+    <span class="ann-badge">🎉 3RD ANNIVERSARY</span>
+    <span>Celebrating 3 years of Stargame Studio — Est. June 2023 · Artists Week: June 1–7, 2026</span>
+    <span class="ann-badge">🌟 ARTISTS WEEK</span>
+  </div>
+
+  <!-- ─────────────────────────────────────────────
+       TOPBAR / NAV
+  ───────────────────────────────────────────── -->
+  <div class="topbar-wrap">
+    <div class="topbar-glow"></div>
+    <nav>
+      <a class="nav-logo" onclick="sp('home');st('home')">
+        <img class="nav-logo-img" src="assets/logo.png" alt="Stargame Studio logo"
+             onerror="this.style.display='none';document.getElementById('logo-fb').style.display='flex'" />
+        <div class="nav-logo-fb" id="logo-fb">SG</div>
+        <span class="nav-logo-text">Stargame Studio</span>
+      </a>
+      <div class="nav-links">
+        <button class="nav-link active" id="nl-home"    onclick="sp('home');st('home')">Home</button>
+        <button class="nav-link"        id="nl-artists" onclick="sp('artists');st('artists')">🌟 Artists Week</button>
+        <button class="nav-link"        id="nl-projects"onclick="sp('projects');st('projects')">Projects</button>
+        <button class="nav-link"        id="nl-showcase"onclick="sp('showcase');st('showcase')">Showcase</button>
+        <button class="nav-link"        id="nl-staff"   onclick="sp('staff');st('staff')">Staff</button>
+        <button class="nav-link"        id="nl-chat"    onclick="sp('chat');st('chat')">Chat</button>
+        <button class="nav-link"        id="nl-contact" onclick="sp('contact');st('contact')">Contact Us</button>
+        <button class="nav-link"        id="nl-about"   onclick="sp('about');st('about')">About</button>
+        <button class="nav-link"        id="nl-verify"  onclick="sp('verify');st('verify')">Verify</button>
+      </div>
+      <div class="nav-end" id="nav-auth">
+        <button class="pill-btn pill-ghost" onclick="openModal()">Sign in</button>
+        <a class="pill-btn pill-gold" href="https://forms.gle/xdgQPCLsNZ7WyMcp9" target="_blank" rel="noopener">Join Studio</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ─────────────────────────────────────────────
+       PAGES  (only .active is visible)
+  ───────────────────────────────────────────── -->
+  <main>
+
+    <!-- ══════════ HOME ══════════ -->
+    <div id="page-home" class="page active">
+
+      <!-- Hero -->
+      <div class="hero-wrap">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero">
+          <div class="hero-text">
+            <div class="ann-eyebrow">
+              <span class="ann-star">✦</span> Est. June 2023 — Celebrating 3 Years
+            </div>
+            <h1 class="hero-title">
+              Dream it.<br>Commission it.<br>
+              <span class="gold">We build it.</span>
+            </h1>
+            <p class="hero-sub">
+              Stargame Studio is a youth-powered creative force turning ROBLOX ideas
+              into stunning realities — games, UGC, 2D fashion, and original
+              human‑made artwork. Driven by passionate young creators aged 13–19.
+            </p>
+            <div class="hero-actions">
+              <a class="pill-btn pill-gold" href="https://forms.gle/xdgQPCLsNZ7WyMcp9" target="_blank" rel="noopener">Apply to Studio</a>
+              <button class="pill-btn pill-purple" onclick="sp('projects');st('projects')">View Projects</button>
+              <button class="pill-btn pill-ghost"  onclick="sp('contact');st('contact')">Commission Us</button>
+            </div>
+            <div class="hero-stats">
+              <div class="hstat"><div class="hstat-num" id="s1">20K+</div><div class="hstat-label">Players &amp; Members</div></div>
+              <div class="hstat"><div class="hstat-num" id="s2">7</div><div class="hstat-label">Games in Dev</div></div>
+              <div class="hstat"><div class="hstat-num" id="s3">300+</div><div class="hstat-label">Studio Members</div></div>
+              <div class="hstat"><div class="hstat-num" id="s4">120+</div><div class="hstat-label">Design Assets</div></div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <img class="hero-main-img" src="assets/summer-icon.png" alt="Stargame Studio summer artwork by Ashie_bearz"
+                 onerror="this.style.background='#151520'" />
+            <div class="hero-logo-badge">
+              <img src="assets/logo.png" alt="SG Logo" onerror="this.parentNode.style.background='var(--purple)';this.style.display='none'" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sgd"></div>
+
+      <!-- Services -->
+      <div class="section">
+        <div class="s-label purple">What we do</div>
+        <h2 class="s-title">Full-spectrum creative studio</h2>
+        <p class="s-desc">Anything you can imagine on ROBLOX, Steam, or beyond — we create it.</p>
+        <div class="cards-grid">
+          <div class="card"><div class="card-ico">🎮</div><h3>Game Development</h3><p>Immersive ROBLOX experiences of any genre — RPGs, simulators, PvP, city roleplay — scripted in Lua.</p></div>
+          <div class="card"><div class="card-ico">👗</div><h3>2D Clothing Design</h3><p>Trendy male &amp; female avatar clothing. Classic sets, seasonal waves. Listed on the ROBLOX marketplace.</p></div>
+          <div class="card"><div class="card-ico g">💎</div><h3>UGC Accessories</h3><p>Hats, helmets, wearable items. We have live UGC in the catalog — Astro HoneyBear &amp; Crimson Broadsword.</p></div>
+          <div class="card"><div class="card-ico">🖼️</div><h3>UI &amp; Graphic Design</h3><p>Game HUDs, menus, icons, thumbnails, banners. Designers Dept led by CigeRDs — strict no-AI policy.</p></div>
+          <div class="card"><div class="card-ico g">✏️</div><h3>Artwork &amp; Illustration</h3><p>Original digital &amp; traditional art. We champion human creativity and actively recruit artists.</p></div>
+          <div class="card"><div class="card-ico">⚙️</div><h3>Scripting &amp; Systems</h3><p>Lua scripting, DataStore v2, network design, VFX, SFX — full-stack Roblox development.</p></div>
+        </div>
+      </div>
+
+      <div class="sgd"></div>
+
+      <!-- Live products -->
+      <div class="section-dark">
+        <div class="section-inner">
+          <div class="s-label muted">Live on Roblox</div>
+          <h2 class="s-title white">Our launched work</h2>
+          <p class="s-desc muted">Real games and items playable on ROBLOX right now.</p>
+          <div class="live-grid">
+            <div class="dk" style="border-color:rgba(52,168,83,0.3)">
+              <div class="dk-emoji">⭐</div>
+              <h3>Starry Simulator</h3>
+              <p>Our first launched ROBLOX game — star-themed simulation with collecting and progression.</p>
+              <div class="chip-row"><span class="chip live">LIVE</span><span class="chip dark">Simulator</span></div>
+              <a href="https://www.roblox.com/games/88425766393203/Starry-Simulator" target="_blank" rel="noopener" class="game-link">Play on ROBLOX →</a>
+            </div>
+            <div class="dk" style="border-color:rgba(232,184,48,0.3)">
+              <div class="dk-emoji">🐻‍❄️</div>
+              <h3>Astro HoneyBear Space Helmet</h3>
+              <p>Our first UGC accessory — a space-themed bear helmet for your ROBLOX avatar.</p>
+              <div class="chip-row"><span class="chip gold">UGC</span><span class="chip live">LIVE</span></div>
+              <a href="https://www.roblox.com/catalog/87253929721032/Astro-HoneyBear-Space-Helmet" target="_blank" rel="noopener" class="game-link">View in Catalog →</a>
+            </div>
+            <div class="dk" style="border-color:rgba(232,184,48,0.3)">
+              <div class="dk-emoji">⚔️</div>
+              <h3>Crimson Broadsword</h3>
+              <p>A wearable sword UGC item available for your avatar in the ROBLOX catalog.</p>
+              <div class="chip-row"><span class="chip gold">UGC</span><span class="chip live">LIVE</span></div>
+              <a href="https://www.roblox.com/catalog/96321796268826/Crimson-Broadsword" target="_blank" rel="noopener" class="game-link">View in Catalog →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sgd"></div>
+
+      <!-- Posts feed -->
+      <div class="section">
+        <div class="feed-header">
+          <div>
+            <div class="s-label purple">Studio updates</div>
+            <h2 class="s-title" style="margin-bottom:0">Official posts</h2>
+          </div>
+          <div id="admin-post-btn" style="display:none">
+            <button class="pill-btn pill-purple" onclick="showCreatePost()">+ New Post</button>
+          </div>
+        </div>
+
+        <!-- Create Post Panel (admin only) -->
+        <div id="create-post-panel" class="create-post-panel" style="display:none">
+          <div class="create-post-title">✏️ New Official Post <span class="chip gold" style="font-size:10px">ADMIN</span></div>
+          <div class="form-field"><input class="form-input" id="pt" placeholder="Post title…" /></div>
+          <div class="form-field"><textarea class="form-input" id="pd" rows="3" placeholder="What's the update?"></textarea></div>
+          <div class="create-post-row">
+            <select class="form-input" id="pe" style="width:auto;padding:9px 12px">
+              <option value="📢">📢 Announcement</option>
+              <option value="🎮">🎮 Game Update</option>
+              <option value="💎">💎 UGC Drop</option>
+              <option value="🌆">🌆 Project Update</option>
+              <option value="🌟">🌟 Artists Week</option>
+              <option value="🎉">🎉 Celebration</option>
+            </select>
+            <button class="pill-btn pill-gold"  onclick="publishPost()">Publish Post</button>
+            <button class="pill-btn pill-ghost" onclick="document.getElementById('create-post-panel').style.display='none'">Cancel</button>
+          </div>
+        </div>
+
+        <div id="posts-container"></div>
+      </div>
+
+    </div><!-- /page-home -->
+
+
+    <!-- ══════════ ARTISTS WEEK ══════════ -->
+    <div id="page-artists" class="page">
+      <div class="aw-wrap">
+        <div class="aw-stars" id="aw-stars"></div>
+        <div class="aw-inner">
+          <div class="aw-header">
+            <div class="s-label gold" style="text-align:center;margin-bottom:12px">Special Event</div>
+            <div class="aw-title">Celebrating Stargame's Artists' Week<br>&amp; Anniversary 2026! 🎨⭐</div>
+            <p class="aw-sub">A dedicated week to honour every artist who has poured their heart into Stargame Studio — their creativity, dedication, and talent that defines who we are. Plus, celebrating our 3rd anniversary since June 2023!</p>
+            <div class="aw-dates">🗓️ Artists Week: June 1 – June 7, 2026 &nbsp;·&nbsp; 🎂 3rd Anniversary: June 2026</div>
+          </div>
+
+          <div class="countdown" id="countdown-display">
+            <div class="count-unit"><span class="count-num" id="cd-d">--</span><span class="count-label">Days</span></div>
+            <div class="count-unit"><span class="count-num" id="cd-h">--</span><span class="count-label">Hours</span></div>
+            <div class="count-unit"><span class="count-num" id="cd-m">--</span><span class="count-label">Mins</span></div>
+            <div class="count-unit"><span class="count-num" id="cd-s">--</span><span class="count-label">Secs</span></div>
+          </div>
+
+          <div class="feed-header" style="margin-bottom:16px">
+            <div>
+              <div class="s-label gold">Featured artists</div>
+              <h2 class="s-title white" style="margin-bottom:0">Artist spotlight gallery</h2>
+            </div>
+            <div id="aw-admin-btn" style="display:none">
+              <button class="pill-btn pill-gold" onclick="showAwUpload()">+ Add Artist Feature</button>
+            </div>
+          </div>
+
+          <!-- Admin upload panel -->
+          <div id="aw-upload-panel" class="aw-upload-panel" style="display:none">
+            <div class="aw-upload-title">✨ Add Artist Feature</div>
+            <div class="aw-upload-grid">
+              <div class="form-field" style="margin-bottom:0"><label class="form-label-dark">Artist name</label><input class="form-input dark-inp" id="aw-nm" placeholder="e.g. Ashie_bearz" /></div>
+              <div class="form-field" style="margin-bottom:0"><label class="form-label-dark">Piece / work title</label><input class="form-input dark-inp" id="aw-piece" placeholder="e.g. Summer Studio Icon" /></div>
+            </div>
+            <div class="form-field"><label class="form-label-dark">Image URL (or an emoji like 🌸)</label><input class="form-input dark-inp" id="aw-img" placeholder="https://… or just type an emoji" /></div>
+            <div style="display:flex;gap:8px">
+              <button class="pill-btn pill-gold"  onclick="addArtistCard()">Add to Gallery</button>
+              <button class="pill-btn pill-ghost" onclick="document.getElementById('aw-upload-panel').style.display='none'">Cancel</button>
+            </div>
+          </div>
+
+          <div class="aw-grid" id="aw-grid">
+            <div class="aw-card">
+              <div class="aw-thumb"><img src="assets/summer-icon.png" alt="Summer icon by Ashie_bearz" onerror="this.parentNode.textContent='🌸'" /></div>
+              <div class="aw-info"><div class="aw-artist">Ashie_bearz</div><div class="aw-piece">Summer Studio Icon — Savior Characters</div></div>
+            </div>
+            <div class="aw-card"><div class="aw-thumb emoji">🌅</div><div class="aw-info"><div class="aw-artist">la.poleyz</div><div class="aw-piece">Studio Banner #1</div></div></div>
+            <div class="aw-card"><div class="aw-thumb emoji">🏙️</div><div class="aw-info"><div class="aw-artist">MDVRXON.XX</div><div class="aw-piece">Studio Banner #2</div></div></div>
+            <div class="aw-card"><div class="aw-thumb emoji">🌆</div><div class="aw-info"><div class="aw-artist">PolarPlatypus</div><div class="aw-piece">StarCity — District Environment Design</div></div></div>
+            <div class="aw-card"><div class="aw-thumb emoji">🌸</div><div class="aw-info"><div class="aw-artist">Poleyz (VY)</div><div class="aw-piece">StarCity — Park &amp; Gardens Design</div></div></div>
+            <div class="aw-card"><div class="aw-thumb emoji">🖥️</div><div class="aw-info"><div class="aw-artist">CigeRDs</div><div class="aw-piece">The Outbreak — Full Game UI</div></div></div>
+            <div class="aw-card"><div class="aw-thumb emoji">☕</div><div class="aw-info"><div class="aw-artist">Alex Ishio</div><div class="aw-piece">Veccera Cafe — Menu &amp; HUD UI</div></div></div>
+            <div class="aw-card"><div class="aw-thumb emoji">🏗️</div><div class="aw-info"><div class="aw-artist">M707 &amp; SkyBlue</div><div class="aw-piece">Veccera Cafe — Interior Build &amp; Exterior</div></div></div>
+          </div>
+
+          <div class="ann-message">
+            <div class="ann-message-title">Happy 3rd Anniversary, Stargame Studio! 🎂⭐</div>
+            <p>Three years of turning dreams into playable realities. From our very first game concept to launching Starry Simulator, our UGC items, and building StarCity — every milestone was made possible by our 300+ members, every artist, every developer, and our incredible community.<br><br><strong>— Lionel &amp; the Stargame Studio team</strong></p>
+          </div>
+        </div>
+      </div>
+    </div><!-- /page-artists -->
+
+
+    <!-- ══════════ PROJECTS ══════════ -->
+    <div id="page-projects" class="page">
+      <div class="section-dark">
+        <div class="section-inner">
+          <div class="s-label muted">Game projects</div>
+          <h2 class="s-title white">7 Games in Development</h2>
+          <p class="s-desc muted">All projects target 2027 for certainty. Built entirely in-house by our team.</p>
+          <div class="game-grid">
+            <div class="game-card" onclick="window.open('https://www.roblox.com/games/88425766393203/Starry-Simulator','_blank')">
+              <div class="game-banner" style="background:linear-gradient(135deg,#080820,#101050)">⭐<span class="g-status live-pill">LIVE NOW</span></div>
+              <div class="game-body"><h3>Starry Simulator</h3><p>Our launched game — star-themed simulation with collecting &amp; progression.</p><div class="chip-row"><span class="chip live">Live</span><span class="chip dark">Simulator</span></div><a href="https://www.roblox.com/games/88425766393203/Starry-Simulator" target="_blank" rel="noopener" class="game-link">Play now →</a></div>
+            </div>
+            <div class="game-card">
+              <div class="game-banner" style="background:linear-gradient(135deg,#1a0808,#4a1818)">⚔️<span class="g-status dev-pill">Target 2027</span></div>
+              <div class="game-body"><h3>Rampage Royale</h3><p>5v5 PvP blending Arsenal, MM2 &amp; BedWars. 4 teams: Murderers (knives), Sheriffs (guns), Innocents ×2. Tower Defense mode. First-person.</p><div class="chip-row"><span class="chip gold">Flagship</span><span class="chip dark">PvP</span></div></div>
+            </div>
+            <div class="game-card">
+              <div class="game-banner" style="background:linear-gradient(135deg,#081408,#183018)">🛋️<span class="g-status dev-pill">Target 2027</span></div>
+              <div class="game-body"><h3>Relax Hangout</h3><p>Social hangout by Lionel. Artists earn 400 Robux/piece for icons, thumbnails, gamepass images.</p><div class="chip-row"><span class="chip dark">Social</span><span class="chip dark">Side Game</span></div></div>
+            </div>
+            <div class="game-card">
+              <div class="game-banner" style="background:linear-gradient(135deg,#0a1420,#1a2840)">🌆<span class="g-status dev-pill">Target 2027</span></div>
+              <div class="game-body"><h3>StarCity</h3><p>Full city roleplay. Main revenue project. Designs by PolarPlatypus &amp; Poleyz (VY). All contributors: 15K Robux on launch.</p><div class="chip-row"><span class="chip gold">Main Revenue</span><span class="chip dark">Roleplay</span></div></div>
+            </div>
+            <div class="game-card">
+              <div class="game-banner" style="background:linear-gradient(135deg,#1a0e04,#3a2008)">☕<span class="g-status dev-pill">Target 2027</span></div>
+              <div class="game-body"><h3>Veccera Cafe</h3><p>Cozy cafe simulator. Design: SkyBlue, UI: Alex Ishio, Build: M707.</p><div class="chip-row"><span class="chip dark">Cafe</span><span class="chip dark">Social</span></div></div>
+            </div>
+            <div class="game-card">
+              <div class="game-banner" style="background:linear-gradient(135deg,#180818,#380838)">🧟<span class="g-status dev-pill">Target 2027</span></div>
+              <div class="game-body"><h3>The Outbreak</h3><p>Survival horror. UI by CigeRDs. Enemy AI, environments, and systems in active development.</p><div class="chip-row"><span class="chip dark">Horror</span><span class="chip dark">Survival</span></div></div>
+            </div>
+            <div class="game-card">
+              <div class="game-banner" style="background:linear-gradient(135deg,#081818,#103030)">🌊<span class="g-status dev-pill">Target 2027</span></div>
+              <div class="game-body"><h3>P.A.S — Project Andularia Stardust</h3><p>Fantasy adventure with rich lore across the Andularia universe.</p><div class="chip-row"><span class="chip dark">Fantasy</span><span class="chip dark">Adventure</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="s-label purple">Commission info</div>
+        <h2 class="s-title">Work with us</h2>
+        <p class="s-desc">Payment: USD/PayPal, Robux, revenue share, gift cards, Discord Nitro. 5% discount if first-choice artist is unavailable.</p>
+        <div class="commission-list">
+          <div class="card row-card"><div class="row-icon">🎮</div><div class="row-body"><div class="row-title">Game / Experience Development</div><p>Full ROBLOX experience from concept to launch — scripting, building, UI, testing</p></div><span class="chip purple">Get Quote</span></div>
+          <div class="card row-card"><div class="row-icon">👗</div><div class="row-body"><div class="row-title">2D Clothing Design</div><p>Male/female shirts, pants, full outfits, seasonal sets — marketplace ready</p></div><span class="chip purple">Get Quote</span></div>
+          <div class="card row-card"><div class="row-icon">💎</div><div class="row-body"><div class="row-title">UGC Accessories</div><p>Hats, helmets, wearable avatar accessories for the ROBLOX catalog</p></div><span class="chip purple">Get Quote</span></div>
+          <div class="card row-card"><div class="row-icon">🎨</div><div class="row-body"><div class="row-title">Art &amp; Design (Human-made, No AI)</div><p>Artwork, UI, banners, thumbnails — 400 Robux/piece baseline for studio projects</p></div><span class="chip gold">Artist-Led</span></div>
+        </div>
+        <div class="info-banner gold-banner">📬 Contact <strong>stargamestudioofficial@gmail.com</strong> or DM <strong>ironlion390 / niamaru87</strong> on Discord for all commission enquiries.</div>
+      </div>
+    </div><!-- /page-projects -->
+
+
+    <!-- ══════════ SHOWCASE ══════════ -->
+    <div id="page-showcase" class="page">
+      <div class="section">
+        <div class="s-label purple">Creative work</div>
+        <h2 class="s-title">Showcase</h2>
+        <p class="s-desc">All human-made — zero AI art across our entire catalog.</p>
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="filterS('all',this)">All</button>
+          <button class="tab-btn" onclick="filterS('ugc',this)">UGC</button>
+          <button class="tab-btn" onclick="filterS('clothing',this)">Clothing</button>
+          <button class="tab-btn" onclick="filterS('art',this)">Artwork</button>
+          <button class="tab-btn" onclick="filterS('ui',this)">UI / Design</button>
+          <button class="tab-btn" onclick="filterS('env',this)">Environments</button>
+        </div>
+        <div class="product-grid" id="sg">
+          <div class="product-card" data-c="ugc"><div class="product-thumb">🐻‍❄️</div><div class="product-info"><div class="nm">Astro HoneyBear Space Helmet</div><div class="by">UGC · Live</div><a href="https://www.roblox.com/catalog/87253929721032/Astro-HoneyBear-Space-Helmet" target="_blank" rel="noopener">View in Catalog →</a></div></div>
+          <div class="product-card" data-c="ugc"><div class="product-thumb">⚔️</div><div class="product-info"><div class="nm">Crimson Broadsword</div><div class="by">UGC · Live</div><a href="https://www.roblox.com/catalog/96321796268826/Crimson-Broadsword" target="_blank" rel="noopener">View in Catalog →</a></div></div>
+          <div class="product-card" data-c="clothing"><div class="product-thumb" style="background:var(--purple-bg)">👕</div><div class="product-info"><div class="nm">Classic Clothing #1</div><div class="by">2D Clothing</div><a href="https://www.roblox.com/catalog/71039210873095" target="_blank" rel="noopener">View →</a></div></div>
+          <div class="product-card" data-c="clothing"><div class="product-thumb" style="background:var(--gold-bg)">👗</div><div class="product-info"><div class="nm">Classic Clothing #2</div><div class="by">2D Clothing</div><a href="https://www.roblox.com/catalog/98010362231188" target="_blank" rel="noopener">View →</a></div></div>
+          <div class="product-card" data-c="clothing"><div class="product-thumb" style="background:#EDE7F6">👘</div><div class="product-info"><div class="nm">Classic Clothing #3</div><div class="by">2D Clothing</div><a href="https://www.roblox.com/catalog/109598215460906" target="_blank" rel="noopener">View →</a></div></div>
+          <div class="product-card" data-c="clothing"><div class="product-thumb" style="background:#FFF8E1">🧥</div><div class="product-info"><div class="nm">Classic Clothing #4</div><div class="by">2D Clothing</div><a href="https://www.roblox.com/catalog/120524510076090" target="_blank" rel="noopener">View →</a></div></div>
+          <div class="product-card" data-c="clothing"><div class="product-thumb" style="background:#E8F5E9">👒</div><div class="product-info"><div class="nm">Classic Clothing #5</div><div class="by">2D Clothing</div><a href="https://www.roblox.com/catalog/112944336515926" target="_blank" rel="noopener">View →</a></div></div>
+          <div class="product-card" data-c="art"><div class="product-thumb img-thumb"><img src="assets/summer-icon.png" alt="Summer icon" onerror="this.parentNode.textContent='🌸'" /></div><div class="product-info"><div class="nm">Summer Studio Icon</div><div class="by">Art · Ashie_bearz</div></div></div>
+          <div class="product-card" data-c="ui"><div class="product-thumb" style="background:#1a0a2a">🖥️</div><div class="product-info"><div class="nm">The Outbreak — Game UI</div><div class="by">UI · CigeRDs</div></div></div>
+          <div class="product-card" data-c="env"><div class="product-thumb" style="background:#0a1428">🌆</div><div class="product-info"><div class="nm">StarCity District Design</div><div class="by">Env · PolarPlatypus</div></div></div>
+          <div class="product-card" data-c="env"><div class="product-thumb" style="background:#1a0e04">☕</div><div class="product-info"><div class="nm">Veccera Cafe — Build</div><div class="by">Build · M707 &amp; SkyBlue</div></div></div>
+          <div class="product-card" data-c="ui"><div class="product-thumb" style="background:#1a1404">☕</div><div class="product-info"><div class="nm">Veccera Cafe — UI</div><div class="by">UI · Alex Ishio</div></div></div>
+        </div>
+        <div class="info-banner" style="margin-top:14px">📁 Full library: <a href="https://drive.google.com/drive/folders/1MgOCP8wJidUXNhBpYysVdISm0j72DEXQ" target="_blank" rel="noopener" style="color:var(--purple);font-weight:600">Google Drive Asset Library →</a></div>
+      </div>
+    </div><!-- /page-showcase -->
+
+
+    <!-- ══════════ STAFF ══════════ -->
+    <div id="page-staff" class="page">
+      <div class="section-dark">
+        <div class="section-inner">
+          <div class="s-label muted">The team</div>
+          <h2 class="s-title white">Staff directory</h2>
+          <p class="s-desc muted">300+ members strong. Core contributors and named staff.</p>
+          <div class="staff-grid">
+            <div class="staff-card"><div class="staff-av" style="background:linear-gradient(135deg,var(--purple),var(--gold-d))">LC</div><div class="staff-nm">Lionel Clement</div><div class="staff-role">Founder &amp; Owner</div><span class="chip gold" style="font-size:10px">ironlion390</span></div>
+            <div class="staff-card"><div class="staff-av" style="background:var(--purple)">NS</div><div class="staff-nm">Head of Staff &amp; Ops</div><div class="staff-role">Co-Manager</div><span class="chip dark" style="font-size:10px">niamaru87</span></div>
+            <div class="staff-card"><div class="staff-av" style="background:#4a2d7a">CG</div><div class="staff-nm">CigeRDs</div><div class="staff-role">Lead UI Designer · Designers Dept</div><span class="chip dark" style="font-size:10px">Designer</span></div>
+            <div class="staff-card"><div class="staff-av" style="background:#2d4a7a">PP</div><div class="staff-nm">PolarPlatypus</div><div class="staff-role">Env. Designer · StarCity</div><span class="chip dark" style="font-size:10px">Builder/Designer</span></div>
+            <div class="staff-card"><div class="staff-av" style="background:#7a2d4a">VY</div><div class="staff-nm">Poleyz (VY)</div><div class="staff-role">Env. Designer · StarCity</div><span class="chip dark" style="font-size:10px">la.poleyz</span></div>
+            <div class="staff-card"><div class="staff-av" style="background:#4a7a2d">SB</div><div class="staff-nm">SkyBlue</div><div class="staff-role">Exterior Design · Veccera Cafe</div><span class="chip dark" style="font-size:10px">Designer</span></div>
+            <div class="staff-card"><div class="staff-av" style="background:#7a4a2d">AI</div><div class="staff-nm">Alex Ishio</div><div class="staff-role">UI Designer · Veccera Cafe</div><span class="chip dark" style="font-size:10px">UI Designer</span></div>
+            <div class="staff-card"><div class="staff-av" style="background:#2d4a4a">M7</div><div class="staff-nm">M707</div><div class="staff-role">Builder · Veccera Cafe</div><span class="chip dark" style="font-size:10px">Builder</span></div>
+            <div class="staff-card"><div class="staff-av" style="background:#6a2d7a">AB</div><div class="staff-nm">Ashie_bearz</div><div class="staff-role">Illustrator · Summer Icon · Savior Chars</div><span class="chip dark" style="font-size:10px">Artist</span></div>
+            <div class="staff-card"><div class="staff-av" style="background:#7a6a2d">LP</div><div class="staff-nm">la.poleyz</div><div class="staff-role">Banner Designer #1</div><span class="chip dark" style="font-size:10px">Artist</span></div>
+            <div class="staff-card"><div class="staff-av" style="background:#3d3d5a">MD</div><div class="staff-nm">MDVRXON.XX</div><div class="staff-role">Banner Designer #2</div><span class="chip dark" style="font-size:10px">Artist</span></div>
+          </div>
+          <div class="join-cta">
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:var(--gold-l);margin-bottom:5px">All roles open — apply now</div>
+              <p>Scripters, Builders, Animators, UI Designers, Artists, Clothes Designers, UGC Creators, QA Testers, Community Managers, Voice Actors, Translators, Bot Developers, Website Developers &amp; more.</p>
+            </div>
+            <a class="pill-btn pill-gold" href="https://forms.gle/xdgQPCLsNZ7WyMcp9" target="_blank" rel="noopener">Apply Now →</a>
+          </div>
+        </div>
+      </div>
+    </div><!-- /page-staff -->
+
+
+    <!-- ══════════ CHAT ══════════ -->
+    <div id="page-chat" class="page">
+      <div class="section">
+        <div class="s-label purple">Community</div>
+        <h2 class="s-title">Studio Chat</h2>
+        <p class="s-desc">Add a studio member by Gmail to start a direct conversation. Sign in required.</p>
+        <div id="chat-wall" class="lwall" style="display:none">
+          <div class="lwall-icon">🔒</div>
+          <h3>Sign in to chat</h3>
+          <p>Studio Chat requires a Google account. Sign in to add members and message them directly.</p>
+          <button class="pill-btn pill-gold" onclick="openModal()">Sign In to Chat</button>
+        </div>
+        <div id="chat-ui" style="display:none">
+          <div class="chat-layout">
+            <div class="fpanel">
+              <div class="fhdr">Members <span id="fc"></span></div>
+              <div class="add-row">
+                <input id="fi" placeholder="Add by Gmail…" onkeydown="if(event.key==='Enter')addFriend()" />
+                <button onclick="addFriend()">Add</button>
+              </div>
+              <div id="fl"><div class="empty-friends">No friends yet</div></div>
+            </div>
+            <div class="chat-win">
+              <div class="cwh">
+                <div class="fav" id="cav">?</div>
+                <div>
+                  <div class="cw-name" id="cnm">Select a conversation</div>
+                  <div class="cw-email" id="cem">—</div>
+                </div>
+              </div>
+              <div class="cwmsgs" id="cmsgs"><div class="cmsg-sys">Select a friend to start chatting</div></div>
+              <div class="cw-input-row">
+                <input class="cwinp" id="cinp" placeholder="Type a message…" onkeydown="if(event.key==='Enter')sendMsg()" />
+                <button class="cwsend" onclick="sendMsg()">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /page-chat -->
+
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <div id="page-contact" class="page">
+      <div class="section">
+        <div class="s-label purple">Get in touch</div>
+        <h2 class="s-title">Contact Us</h2>
+        <p class="s-desc">Commissions, partnerships, questions. Sent simultaneously to both official emails. Reply within 24 hours.</p>
+        <div class="contact-layout">
+          <div>
+            <div id="cf-ok" class="contact-success" style="display:none">
+              <div style="font-size:36px;margin-bottom:10px">✅</div>
+              <div class="contact-success-title">Message sent!</div>
+              <p>We'll reply within 24 hours. You can also reach us at stargamestudioofficial@gmail.com directly.</p>
+              <button class="pill-btn pill-purple" style="margin-top:14px" onclick="resetContact()">Send another</button>
+            </div>
+            <div id="cf-form">
+              <div class="form-field"><label class="form-label">Your name</label><input class="form-input" id="cfn" placeholder="Full name" /></div>
+              <div class="form-field"><label class="form-label">Email address</label><input class="form-input" type="email" id="cfe" placeholder="your@email.com" /></div>
+              <div class="form-field"><label class="form-label">Subject</label>
+                <select class="form-input" id="cfs">
+                  <option value="">Select a topic…</option>
+                  <option>Game Development Commission</option>
+                  <option>Clothing / UGC Commission</option>
+                  <option>Art Commission</option>
+                  <option>UI / Graphic Design Commission</option>
+                  <option>Partnership / Collaboration</option>
+                  <option>Join the Studio</option>
+                  <option>General Support / Question</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-field"><label class="form-label">Detailed description</label><textarea class="form-input" id="cfd" placeholder="Describe your project in detail — include references, budget, timeline, and examples if possible."></textarea></div>
+              <button class="pill-btn pill-gold submit-btn" onclick="submitContact()">Send message →</button>
+              <div class="form-note">Sent to stargamestudioofficial@gmail.com &amp; lionelclementofficial@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-info-col">
+            <div class="contact-info-box">
+              <div class="contact-info-title">Contact details</div>
+              <div class="info-row"><span class="info-label">Studio</span><span class="info-val">stargamestudioofficial@gmail.com</span></div>
+              <div class="info-row"><span class="info-label">Founder</span><span class="info-val">lionelclementofficial@gmail.com</span></div>
+              <div class="info-row"><span class="info-label">Discord</span><span class="info-val">ironlion390 / niamaru87</span></div>
+              <div class="info-row"><span class="info-label">Response</span><span class="info-val">Within 24 hours</span></div>
+              <div class="info-row"><span class="info-label">Est.</span><span class="info-val">June 2023 — 3 years this June!</span></div>
+              <div class="contact-links">
+                <a class="pill-btn pill-gold"   href="https://forms.gle/xdgQPCLsNZ7WyMcp9" target="_blank" rel="noopener" style="justify-content:center">Apply to Studio →</a>
+                <a class="pill-btn pill-ghost"  href="https://discord.gg/CFWv8fZnyY" target="_blank" rel="noopener" style="justify-content:center;border-color:rgba(100,100,200,.35);color:rgba(140,140,220,.8)">Appeals Discord →</a>
+                <a class="pill-btn pill-ghost"  href="https://docs.google.com/forms/d/e/1FAIpQLSd8ft4GxVXmwebTqLDdXefV8RNGAVeByBZQXJ8Mypp0d0s6Aw/viewform" target="_blank" rel="noopener" style="justify-content:center;border-color:rgba(200,80,80,.3);color:rgba(220,120,120,.8)">Resignation Form →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /page-contact -->
+
+
+    <!-- ══════════ ABOUT ══════════ -->
+    <div id="page-about" class="page">
+      <div class="section-dark">
+        <div class="section-inner">
+          <div class="s-label muted">Our story</div>
+          <h2 class="s-title white">About Stargame Studio</h2>
+          <p class="about-quote">"Stargame Studio is your youth-powered creative force, turning ROBLOX community ideas into stunning realities. From immersive experiences to UGC, trendy 2D fashion to captivating artwork — if you can imagine it on ROBLOX, Steam, or beyond, we're here to make it happen. Driven by passionate young developers, we thrive on friendship, open communication, and unstoppable teamwork."</p>
+          <div class="val-grid">
+            <div class="val-block"><h3>Artists first — strict no-AI art policy</h3><p>Stargame Studio unequivocally values original artistic creation. AI-generated art is not a substitute for human artistry. We champion traditional and digital art forms, actively recruiting human artists. AI may only be used for reference/inspiration — never submitted as original work.</p></div>
+            <div class="val-block"><h3>Developer structure &amp; compensation</h3><p>Tiered system: Full-Time (revenue share on milestones), Part-Time (proportional to tenure), Commission-Based (paid per project). Payments via USD/PayPal, Robux, revenue share, gift cards, Discord Nitro. All contributors credited.</p></div>
+            <div class="val-block"><h3>Youth-powered — especially ages 13–19</h3><p>We particularly champion young developers and artists aged 13–19, providing a platform to build real skills, real portfolios, and real experience — proving age is no barrier to professional quality output.</p></div>
+            <div class="val-block"><h3>Safety, conduct &amp; community</h3><p>Full Code of Conduct in force as of March 2025. Respect, inclusivity, cyber safety, and professional communication are non-negotiable. Appeals Department available. All studio communications are family-friendly.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="s-label gold">2027 Roadmap</div>
+        <h2 class="s-title">What's coming</h2>
+        <div class="roadmap">
+          <div class="rm-item"><div class="rm-ico">⭐</div><div><div class="rm-date">LIVE NOW</div><div class="rm-title">Starry Simulator — Launched</div><div class="rm-desc">Our first full game is live on ROBLOX.</div></div></div>
+          <div class="rm-item"><div class="rm-ico">🌆</div><div><div class="rm-date">Target 2027</div><div class="rm-title">StarCity Release</div><div class="rm-desc">Full city roleplay — main revenue project. Contributors get 15K Robux on launch.</div></div></div>
+          <div class="rm-item"><div class="rm-ico">☕</div><div><div class="rm-date">Target 2027</div><div class="rm-title">Veccera Cafe Launch</div><div class="rm-desc">Cozy cafe simulator — final testing and marketing push.</div></div></div>
+          <div class="rm-item"><div class="rm-ico">🛋️</div><div><div class="rm-date">Target 2027</div><div class="rm-title">Relax Hangout Release</div><div class="rm-desc">Social hangout by Lionel. Artists: 400 Robux/piece.</div></div></div>
+          <div class="rm-item"><div class="rm-ico">👗</div><div><div class="rm-date">2027</div><div class="rm-title">SG 2027 Clothes Wave</div><div class="rm-desc">New seasonal clothing collection on ROBLOX marketplace.</div></div></div>
+          <div class="rm-item"><div class="rm-ico">⚔️</div><div><div class="rm-date">TBD 2027</div><div class="rm-title">Rampage Royale &amp; P.A.S</div><div class="rm-desc">Both major projects in active development — release windows TBA.</div></div></div>
+        </div>
+      </div>
+    </div><!-- /page-about -->
+
+
+    <!-- ══════════ VERIFY ══════════ -->
+    <div id="page-verify" class="page">
+      <div class="section">
+        <div class="s-label purple">Verification</div>
+        <h2 class="s-title">Verify Membership</h2>
+        <p class="s-desc">Check if someone is an official Stargame Studio member or verified partner.</p>
+        <div class="vbox">
+          <div class="form-field"><label class="form-label">ROBLOX username, Gmail, or Discord handle</label><input class="form-input" id="vi" placeholder="e.g. ironlion390, cigerds, ashie_bearz…" /></div>
+          <button class="pill-btn pill-purple" onclick="doVerify()">Verify Member</button>
+          <div id="vr" style="display:none;padding:12px 16px;border-radius:8px;font-size:13px;margin-top:14px"></div>
+        </div>
+      </div>
+    </div><!-- /page-verify -->
+
+  </main><!-- /main -->
+
+
+  <!-- ─────────────────────────────────────────────
+       FOOTER
+  ───────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Stargame Studio logo" onerror="this.style.display='none'" />
+          <div class="footer-brand-name">Stargame Studio</div>
+          <p>Dream it, commission it, we build it — with passion, quality, and heart.<br />Est. June 2023 · 3rd Anniversary June 2026.</p>
+          <div class="social-pills">
+            <a class="spill" href="#" target="_blank" rel="noopener">Discord</a>
+            <a class="spill" href="#" target="_blank" rel="noopener">Twitter</a>
+            <a class="spill" href="#" target="_blank" rel="noopener">YouTube</a>
+            <a class="spill" href="#" target="_blank" rel="noopener">Instagram</a>
+            <a class="spill" href="#" target="_blank" rel="noopener">TikTok</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <a onclick="sp('artists');st('artists')">🌟 Artists Week 2026</a>
+          <a onclick="sp('projects');st('projects')">Projects (7 Games)</a>
+          <a onclick="sp('showcase');st('showcase')">Showcase</a>
+          <a onclick="sp('staff');st('staff')">Staff Directory</a>
+          <a onclick="sp('about');st('about')">About &amp; Roadmap</a>
+          <a onclick="sp('verify');st('verify')">Verify Member</a>
+        </div>
+        <div class="footer-col">
+          <h4>Live on Roblox</h4>
+          <a href="https://www.roblox.com/games/88425766393203/Starry-Simulator" target="_blank" rel="noopener">Starry Simulator ↗</a>
+          <a href="https://www.roblox.com/catalog/87253929721032/Astro-HoneyBear-Space-Helmet" target="_blank" rel="noopener">Astro HoneyBear ↗</a>
+          <a href="https://www.roblox.com/catalog/96321796268826/Crimson-Broadsword" target="_blank" rel="noopener">Crimson Broadsword ↗</a>
+          <a href="https://drive.google.com/drive/folders/1MgOCP8wJidUXNhBpYysVdISm0j72DEXQ" target="_blank" rel="noopener">Asset Library ↗</a>
+        </div>
+        <div class="footer-col">
+          <h4>Work with us</h4>
+          <a href="https://forms.gle/xdgQPCLsNZ7WyMcp9" target="_blank" rel="noopener">Apply to Studio</a>
+          <a onclick="sp('contact');st('contact')">Commission Us</a>
+          <a href="mailto:stargamestudioofficial@gmail.com">Email Us</a>
+          <a href="https://discord.gg/CFWv8fZnyY" target="_blank" rel="noopener">Appeals Discord</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8ft4GxVXmwebTqLDdXefV8RNGAVeByBZQXJ8Mypp0d0s6Aw/viewform" target="_blank" rel="noopener">Resign</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Stargame Studio. All rights reserved. Est. June 2023.</span>
+        <span>Art credits: Ashie_bearz · la.poleyz · MDVRXON.XX · CigeRDs · PolarPlatypus · Poleyz</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ─────────────────────────────────────────────
+       CMS EDITOR  (admin-only slide-in panel)
+  ───────────────────────────────────────────── -->
+  <div class="cms-overlay" id="cms-overlay">
+    <div class="cms-panel">
+      <div class="cms-hdr">
+        <div class="cms-title">⚙ Site Editor <span class="chip gold" style="font-size:10px;margin-left:6px">ADMIN</span></div>
+        <button onclick="closeCMS()" class="cms-close">✕</button>
+      </div>
+      <div class="cms-body">
+        <div class="cms-section">
+          <div class="cms-sec-title">Hero Section</div>
+          <div class="cms-field"><label class="cms-label">Hero tagline (line 3 — gold text)</label><input class="cms-input" id="cms-tagline" value="We build it." oninput="document.querySelectorAll('.gold').forEach(e=>{if(e.tagName!=='STYLE')e.textContent=this.value})" /></div>
+          <div class="cms-field"><label class="cms-label">Hero subtext</label><textarea class="cms-input" id="cms-sub" rows="3">Stargame Studio is a youth-powered creative force...</textarea></div>
+          <div class="cms-field"><label class="cms-label">Eyebrow / tagline pill</label><input class="cms-input" id="cms-eyebrow" value="Est. June 2023 — Celebrating 3 Years" /></div>
+        </div>
+        <div class="cms-section">
+          <div class="cms-sec-title">Stats Bar</div>
+          <div class="cms-two-col">
+            <div class="cms-field"><label class="cms-label">Players / Members</label><input class="cms-input" id="cs1" value="20K+" oninput="document.getElementById('s1').textContent=this.value" /></div>
+            <div class="cms-field"><label class="cms-label">Games in Dev</label><input class="cms-input" id="cs2" value="7" oninput="document.getElementById('s2').textContent=this.value" /></div>
+            <div class="cms-field"><label class="cms-label">Studio Members</label><input class="cms-input" id="cs3" value="300+" oninput="document.getElementById('s3').textContent=this.value" /></div>
+            <div class="cms-field"><label class="cms-label">Design Assets</label><input class="cms-input" id="cs4" value="120+" oninput="document.getElementById('s4').textContent=this.value" /></div>
+          </div>
+        </div>
+        <div class="cms-section">
+          <div class="cms-sec-title">Brand Colors</div>
+          <div class="cms-color-row">
+            <div class="cms-field" style="margin-bottom:0;flex:1"><label class="cms-label">Purple</label><input type="color" class="cms-color-swatch" value="#8B47C4" oninput="document.documentElement.style.setProperty('--purple',this.value)" /></div>
+            <div class="cms-field" style="margin-bottom:0;flex:1"><label class="cms-label">Gold</label><input type="color" class="cms-color-swatch" value="#C8951A" oninput="document.documentElement.style.setProperty('--gold',this.value)" /></div>
+            <div class="cms-field" style="margin-bottom:0;flex:1"><label class="cms-label">Background</label><input type="color" class="cms-color-swatch" value="#080810" oninput="document.documentElement.style.setProperty('--black',this.value)" /></div>
+          </div>
+        </div>
+        <div class="cms-section">
+          <div class="cms-sec-title">Add Artist to Gallery</div>
+          <div class="cms-field"><label class="cms-label">Artist name</label><input class="cms-input" id="cms-aw-nm" placeholder="e.g. Ashie_bearz" /></div>
+          <div class="cms-field"><label class="cms-label">Piece title</label><input class="cms-input" id="cms-aw-pc" placeholder="e.g. Summer Studio Icon" /></div>
+          <div class="cms-field"><label class="cms-label">Image URL or emoji</label><input class="cms-input" id="cms-aw-img" placeholder="https://… or 🌸" /></div>
+          <button class="pill-btn pill-gold" style="width:100%;justify-content:center;border-radius:7px" onclick="cmsAddArtist()">+ Add to Artists Week Gallery</button>
+        </div>
+        <div class="cms-section">
+          <div class="cms-sec-title">Add Custom Section</div>
+          <div class="cms-field"><label class="cms-label">Section title</label><input class="cms-input" id="cms-cs-t" placeholder="e.g. New Announcement" /></div>
+          <div class="cms-field"><label class="cms-label">Content</label><textarea class="cms-input" id="cms-cs-b" rows="3" placeholder="Write your content here…"></textarea></div>
+          <div class="cms-field"><label class="cms-label">Background theme</label>
+            <select class="cms-input" id="cms-cs-bg">
+              <option value="light">Light (white)</option>
+              <option value="dark">Dark (black)</option>
+              <option value="gold">Gold accent</option>
+              <option value="purple">Purple accent</option>
+            </select>
+          </div>
+          <button class="pill-btn pill-purple" style="width:100%;justify-content:center;border-radius:7px" onclick="addCustomSection()">+ Inject Section into Site</button>
+        </div>
+        <div class="cms-section">
+          <div class="cms-sec-title">Social Media Links</div>
+          <div class="cms-field"><label class="cms-label">Discord URL</label><input class="cms-input" id="cms-discord" placeholder="https://discord.gg/…" /></div>
+          <div class="cms-field"><label class="cms-label">Twitter URL</label><input class="cms-input" id="cms-twitter" placeholder="https://twitter.com/…" /></div>
+          <div class="cms-field"><label class="cms-label">YouTube URL</label><input class="cms-input" id="cms-youtube" placeholder="https://youtube.com/…" /></div>
+          <div class="cms-field"><label class="cms-label">Instagram URL</label><input class="cms-input" id="cms-instagram" placeholder="https://instagram.com/…" /></div>
+          <button class="pill-btn pill-ghost" style="width:100%;justify-content:center;border-radius:7px" onclick="saveSocials()">Save Social Links</button>
+        </div>
+      </div>
+      <div class="cms-footer">
+        <button class="publish-btn" onclick="publishCMS()">🚀 Publish Live</button>
+        <button class="cms-discard" onclick="closeCMS()">Discard</button>
+      </div>
+    </div>
+    <div class="cms-backdrop" onclick="closeCMS()"></div>
+  </div>
+
+  <!-- Publish toast -->
+  <div class="publish-toast" id="pub-toast">✅ Published! Changes are live for all visitors.</div>
+
+  <!-- Notification toast -->
+  <div class="notif" id="notif"></div>
+
+
+  <!-- ─────────────────────────────────────────────
+       AUTH MODAL
+  ───────────────────────────────────────────── -->
+  <div class="modal-bg" id="auth-modal">
+    <div class="modal">
+      <button class="modal-x" onclick="closeModal()">✕</button>
+      <div class="modal-logo">
+        <img src="assets/logo.png" alt="SG" onerror="this.style.display='none'" />
+        <span class="modal-logo-text">Stargame Studio</span>
+      </div>
+      <h2>Sign in</h2>
+      <p class="modal-sub">Join 300+ members · Access chat, reactions &amp; studio features</p>
+      <button class="g-btn" onclick="loginGoogle()">
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#4285f4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34a853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#fbbc05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+          <path fill="#ea4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+        </svg>
+        Continue with Google
+      </button>
+      <div class="div-or">or</div>
+      <button class="guest-btn" onclick="loginGuest()">Continue as guest (read-only)</button>
+    </div>
+  </div>
+
+
+  <!-- ─────────────────────────────────────────────
+       SG ASSISTANT (Gemini AI)
+  ───────────────────────────────────────────── -->
+  <div class="ai-panel" id="ai-panel" role="dialog" aria-label="SG Assistant">
+    <div class="ai-hdr">
+      <div class="ai-ico">✦</div>
+      <div>
+        <div class="ai-nm">SG Assistant</div>
+        <div class="ai-sub">Powered by Gemini · SG Studio Expert</div>
+      </div>
+      <button class="ai-cl" onclick="toggleAI()" aria-label="Close assistant">✕</button>
+    </div>
+    <div class="ai-msgs" id="ai-msgs">
+      <div class="aib">Hi! I'm SG Assistant — your guide to everything Stargame Studio. Ask about our games, team, commissions, Artists Week, or how to join! 🎨⭐</div>
+    </div>
+    <div class="ai-chips">
+      <button class="aic" onclick="askAI('What games does Stargame Studio have?')">Our games</button>
+      <button class="aic" onclick="askAI('Tell me about Artists Week 2026')">Artists Week</button>
+      <button class="aic" onclick="askAI('How do I commission SG Studio?')">Commission</button>
+      <button class="aic" onclick="askAI('How do I join the studio?')">Join us</button>
+    </div>
+    <div class="ai-ir">
+      <input class="ai-inp" id="ai-in" placeholder="Ask about SG Studio…" onkeydown="if(event.key==='Enter')sendAI()" />
+      <button class="ai-sb" onclick="sendAI()">→</button>
+    </div>
+  </div>
+  <button class="ai-fab" onclick="toggleAI()" aria-label="Open SG Assistant">✦</button>
+
+
+  <!-- Scripts — loaded last so DOM is ready -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
