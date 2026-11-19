@@ -1,0 +1,17 @@
+{
+  "route": "/",
+  "source": "https://sites.google.com/view/stargame-studio/home",
+  "scrollContainer": "window (document.scrollingElement)",
+  "checks": [
+    {"control": "Desktop sidebar nav: Verify", "viewport": "1280x900", "expected": "/view/stargame-studio/verify on same origin", "observed": "http://localhost:8080/view/stargame-studio/verify (page not imported)", "status": "pass"},
+    {"control": "Desktop sidebar nav: Home", "viewport": "1280x900", "expected": "stays on home", "observed": "href # on /", "status": "pass"},
+    {"control": "Phone menu button (#s9iPrd)", "viewport": "390x844", "expected": "drawer opens with Home, Verify; dimmed overlay; icon becomes X", "observed": "matches source", "status": "pass", "screenshot": "shots/pair_menu.png"},
+    {"control": "Phone menu close (overlay click / Escape)", "viewport": "390x844", "expected": "drawer closes, focus returns to button", "observed": "matches", "status": "pass"},
+    {"control": "Phone menu: Verify link", "viewport": "390x844", "expected": "/view/stargame-studio/verify on same origin", "observed": "http://localhost:8080/view/stargame-studio/verify", "status": "pass"},
+    {"control": "Phone top bar after scroll", "viewport": "390x844", "scroll": ">56px", "expected": "dark bar with menu icon, logo, search", "observed": "matches", "status": "pass", "screenshot": "shots/pair_m_scrolled.png"},
+    {"control": "Learn more CTA", "expected": "Google Doc link", "observed": "same external URL", "status": "pass"},
+    {"control": "Table of contents anchors", "viewport": "1280x900", "expected": "scroll to section (4th link -> y 3642)", "observed": "y 3642", "status": "pass"},
+    {"control": "Search button", "expected": "Google Sites search overlay", "observed": "not rebuilt (source search relies on Google backend)", "status": "blocked"}
+  ],
+  "sections": {"desktopHeight": {"source": 25106, "preview": 25103}, "phoneHeight": {"source": 59285, "preview": 59282}, "allImagesVisible": true, "unavailableAssets": ["lh3.googleusercontent.com/docsubipk/... (404 on source too)"]}
+}
